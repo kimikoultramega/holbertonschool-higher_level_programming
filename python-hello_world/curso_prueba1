@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+nombre_curso = "probando cosas"
+probando_2 = "Hola"
+probando_3 = "como"
+probando_4 = "estas"
+alumnos = 5000
+puntaje = 9.9
+publicado = True
+print(nombre_curso, probando_2, probando_3, probando_4)

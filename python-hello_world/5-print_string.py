@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 str = "Holberton School"
-Holberton, School = str.split()
-print(f"{Holberton} {School}{Holberton} {School}{Holberton} {School}\n{str[:9]}")
+h, s = str.split()
+print(f"{h} {s}{h} {s}{h} {s}\n{str[:9]}")

@@ -6,9 +6,9 @@ o_v = last_digit
 
 if number < 0:
     o_v *= -1
-if last_digit > 5:
+if o_v > 5:
     print(f"Last digit of {number} is {o_v} and is greater than 5")
-elif last_digit == 0:
+elif o_v == 0:
     print(f"Last digit of {number} is {o_v} and is 0")
 else:
     print(f"Last digit of {number} is {o_v} and is less than 6 and not 0")

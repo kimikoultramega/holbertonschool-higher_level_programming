@@ -1,13 +1,19 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    
- # Función auxiliar para obtener los dos primeros elementos de una tupla
-    def get_elements(tup):
-        return tup[0] if len(tup) > 0 else 0, tup[1] if len(tup) > 1 else 0
 
-    # Obtenemos los dos primeros elementos de cada tupla
-    a1, a2 = get_elements(tuple_a)
-    b1, b2 = get_elements(tuple_b)
-    
-    # Sumamos los elementos correspondientes
-    return (a1 + b1, a2 + b2)
+    a1 = tuple_a[0] if len(tuple_a) > 0 else 0
+    a2 = tuple_a[1] if len(tuple_a) > 1 else 0
+
+    b1 = tuple_b[0] if len(tuple_b) > 0 else 0
+    b2 = tuple_b[1] if len(tuple_b) > 1 else 0
+
+
+    def obtener_elementos(tup):
+        return tup[0] if len(tup) > 0 else 0, tup[1] if len(tup) > 0 else 0
+
+    #ahora yo tengo dos elementos que debo de almacenar en 2 variables
+
+    a1, a2 = obtener_elementos(tuple_a)
+    b1, b2 = obtener_elementos(tuple_b)
+
+    return(a1 + b1, a2 + b2)

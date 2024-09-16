@@ -5,4 +5,7 @@ Documentación
 
 
 class Square:
+    """
+    Algo
+    """
     __dict__ = {}

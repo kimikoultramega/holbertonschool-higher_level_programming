@@ -3,6 +3,7 @@
 This script defines a class called Square.
 """
 
+
 class Square:
     """
     Represents a square.

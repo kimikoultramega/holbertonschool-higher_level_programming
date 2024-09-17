@@ -4,12 +4,14 @@ Hay que colocar texto
 """
 
 class Square:
+    
     """
     Otro poco de texto
     """
     def __init__(self, size=0):
+
         """
-        Más texto
+        Initialize the size
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

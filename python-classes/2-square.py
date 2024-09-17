@@ -1,9 +1,21 @@
 #!/usr/bin/python3
+"""
 
+Script
+"""
 class Square:
+
+
     """
+    Script
     """
+
     def __init__(self, size=0):
+
+        """
+        Script
+        """
+        
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:

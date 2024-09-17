@@ -9,13 +9,13 @@ class Square:
 
 
     """
-    Script
+    Square
     """
 
     def __init__(self, size=0):
 
         """
-        Script
+        Initialize the size
         """
 
     if not isinstance(size, int):

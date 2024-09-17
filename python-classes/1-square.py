@@ -2,6 +2,8 @@
 """
 The game creation
 """
+
+
 class Square:
     """
     The class creation

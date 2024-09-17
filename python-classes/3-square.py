@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 """
-Hay que colocar texto
+This script defines a class called Square.
 """
 
 class Square:
-    
     """
-    Otro poco de texto
+    Represents a square.
     """
     def __init__(self, size=0):
 
         """
-        Initialize the size
+        initialize the size
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

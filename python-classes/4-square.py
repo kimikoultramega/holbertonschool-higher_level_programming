@@ -14,14 +14,14 @@ class Square:
         El parámetro size tiene un valor por defecto de 0
         """
         self.size = size
-    
+
     @property
     def size(self):
         """
         Getter para obtener el tamaño de cuadrado
         """
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """
@@ -32,7 +32,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def area(self):
         """
         Método público para calcular el área del cuadrado

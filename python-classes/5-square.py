@@ -3,12 +3,12 @@
 ssss
 """
 
+
 class Square:
+
     """
     Plano del cuadrado
     """
-
-
     def __init__(self, size=0):
         """
         Inicializa Square con tamaño opcional

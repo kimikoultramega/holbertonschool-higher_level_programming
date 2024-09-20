@@ -1,13 +1,18 @@
 #!/usr/bin/python3
+"""
+ssss
+"""
+
 class Square:
     """
-    sssss
+    Plano del cuadrado
     """
 
-    
+
     def __init__(self, size=0):
         """
-        ssssss
+        Inicializa Square con tamaño opcional
+        El parámetro size tiene un valor por defecto de 0
         """
         self.size = size
 
@@ -33,7 +38,7 @@ class Square:
         """
         sssss
         """
-        self.__size ** 2
+        return self.__size ** 2
 
     def my_print(self):
         """

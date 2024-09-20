@@ -3,6 +3,8 @@ class Square:
     """
     sssss
     """
+
+    
     def __init__(self, size=0):
         """
         ssssss

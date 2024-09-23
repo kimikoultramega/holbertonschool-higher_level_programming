@@ -21,14 +21,14 @@ class Rectangle:
         Documentación
         """
         return self.__height
-     
+
     @property
     def width(self):
         """
         Documentación
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """

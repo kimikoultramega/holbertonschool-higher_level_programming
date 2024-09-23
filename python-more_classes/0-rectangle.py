@@ -3,6 +3,7 @@
 Documentación
 """
 
+
 class Rectangle:
     """
     Documentación

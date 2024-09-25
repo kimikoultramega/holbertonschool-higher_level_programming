@@ -7,9 +7,7 @@
 Traceback (most recent call last):
 Exception: area() is not implemented
 
-
 >>> geo.integer_validator("age", 5)
-
 
 >>> geo.integer_validator("age", 0)
 Traceback (most recent call last):
@@ -19,25 +17,19 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
-
 >>> geo.integer_validator("age", "4")
 Traceback (most recent call last):
 TypeError: age must be an integer
-
 
 >>> geo.integer_validator("age", (4,))
 Traceback (most recent call last):
 TypeError: age must be an integer
 
-
 >>> geo.integer_validator("age", [3])
 Traceback (most recent call last):
 TypeError: age must be an integer
 
-
 >>> geo.integer_validator("age", True)
-
-
 
 >>> geo.integer_validator("age", {3, 4})
 Traceback (most recent call last):

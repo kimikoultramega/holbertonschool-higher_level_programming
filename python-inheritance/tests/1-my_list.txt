@@ -4,3 +4,7 @@ Test present: check instantiation
     >>> my_list = MyList()
     >>> isinstance(my_list, MyList)
     True
+
+Test present: check inherits from list
+    >>> isinstance(my_list, list)
+    True

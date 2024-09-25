@@ -8,3 +8,33 @@ Test present: check instantiation
 Test present: check inherits from list
     >>> isinstance(my_list, list)
     True
+
+Test present: check __str__
+    >>> my_list.append(5)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [5, 1]
+
+Test present: check append()
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(2)
+    >>> my_list
+    [3, 2]
+
+Test present: check print_sorted() with sorted append
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+
+ Test present: check print_sorted() with not sorted append
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+

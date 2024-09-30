@@ -15,3 +15,4 @@ class Dragon(SwimMixin, Flymixin)
 draco = Dragon()
 draco.swim
 draco.fly
+draco.roar

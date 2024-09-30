@@ -39,9 +39,7 @@ class Rectangle(Shape):
     def permieter(self):
         return (self.width * 2) + (self.height * 2)
 
-    def shape_info(shape):
-        area = shape.area()
-        perimeter = shape.perimeter()
-
-        print(f"Area: {shape.area()}")
-        print(f"Perimeter: {shape.permieter()}")
+def shape_info(shape):
+      
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.permieter()}")

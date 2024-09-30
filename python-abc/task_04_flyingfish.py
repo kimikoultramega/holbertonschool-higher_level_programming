@@ -24,5 +24,3 @@ miPez = FlyingFish()
 miPez.fly()
 miPez.swim()
 miPez.habitat()
-
-print(miPez.mro())

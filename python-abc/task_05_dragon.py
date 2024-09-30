@@ -8,7 +8,7 @@ class Flymixin():
     def fly(self):
         print("The creature flies!")
 
-class Dragon(SwimMixin, Flymixin)
+class Dragon(SwimMixin, Flymixin):
     def roar(self):
         print("The dragon roars!")
 

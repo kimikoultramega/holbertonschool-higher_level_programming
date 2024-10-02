@@ -13,4 +13,4 @@ def read_file(filename=""):
 
         content = file.read()  # Lee el contenido y lo guarda en content
 
-        print(content)
+        print(content, end="")

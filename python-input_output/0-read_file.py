@@ -9,7 +9,7 @@ def read_file(filename=""):
     Doc
     """
 
-    with open(filename, 'r', encoding='utf-8') as file:
+    with open(filename, 'r') as file:
 
         content = file.read()  # Lee el contenido y lo guarda en content
 

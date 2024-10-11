@@ -57,8 +57,5 @@ def fetch_and_save_posts():
 
         print("Datos guaraddos en posts.csv exitosamente")
 
-    else:
-        print("Datos guardados en posts.csv exitosamente")
-    
-    fetch_and_print_posts()
-    fetch_and_save_posts
+fetch_and_print_posts()
+fetch_and_save_posts()

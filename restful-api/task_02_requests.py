@@ -29,33 +29,33 @@ def fetch_and_save_posts():
 
         posts = response.json() # Post es una lista de diccionarios
 
+        post_to_save = [] # Lista vacía
+    
+        for post in posts: # Bucle
+
+            post_data = {
+                "id": post["id"],
+                "title": post["title"],
+                "body": post["body"]
+            }
+
+            post_to_save.append(post_data)
+
+        with open('posts.csv', mode='w', newline="") as file:
+
+            # Definimos claves como encabezados
+            fieldnames = ["id", "title", "body"]
+
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+            writer.writeheader()
+
+            writer.writerows(post_to_save)
+
+            print("Datos guarados en posts.csv exitosamente")
+
     else:
         print("Error")
-    
-    post_to_save = [] # Lista vacía
-    
-    for post in posts: # Bucle
-
-        post_data = {
-            "id": post["id"],
-            "title": post["title"],
-            "body": post["body"]
-        }
-
-        post_to_save.append(post_data)
-
-    with open('posts.csv', mode='w', newline="") as file:
-
-        # Definimos claves como encabezados
-        fieldnames = ["id", "title", "body"]
-
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-
-        writer.writeheader()
-
-        writer.writerows(post_to_save)
-
-        print("Datos guarados en posts.csv exitosamente")
 
 fetch_and_print_posts()
 fetch_and_save_posts()

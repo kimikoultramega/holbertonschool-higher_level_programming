@@ -10,7 +10,7 @@ def fetch_and_print_posts():
 
     response = requests.get(url)
 
-    print(f"Status code: {response.status_code}")
+    print(f"Status Code: {response.status_code}")
 
     if response.status_code == 200:
     # Convertimos la respuesta en una lista de diccionarios
@@ -55,7 +55,7 @@ def fetch_and_save_posts():
 
         writer.writerows(post_to_save)
 
-        print("Datos guaraddos en posts.csv exitosamente")
+        print("Datos guarados en posts.csv exitosamente")
 
 fetch_and_print_posts()
 fetch_and_save_posts()

@@ -6,6 +6,7 @@ import json
 class MyRequestHandler(http.server.BaseHTTPRequestHandler):
     
     def do_GET(self):
+
         if self.path == "/":
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
@@ -21,18 +22,19 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
                 "age": 30, 
                 "city": "New York"
                 }
-            self.wfile.write(json.dumps(response, separators=(',', ':')).encode('utf-8'))
+            self.wfile.write(json.dumps(response).encode('utf-8'))
 
         elif self.path == "/status":
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"OK")
+
         else:
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"Endpoint not found")
+            self.wfile.write(b"Not found")
 
 if __name__ == "__main__":
     server_address = ("", 8000)

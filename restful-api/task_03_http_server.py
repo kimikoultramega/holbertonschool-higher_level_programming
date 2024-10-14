@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import http.server
+import json
 
 class MyRequestHandler(http.server.BaseHTTPRequestHandler):
     
@@ -9,7 +10,7 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"¡Hola, esta es una API simple")
+            self.wfile.write(b"¡Hello, this is a simple API!")
 
         elif self.path == "/data":
             self.send_response(200)

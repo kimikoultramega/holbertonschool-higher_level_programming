@@ -34,7 +34,7 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"Not found")
+            self.wfile.write(b"Not Found")
 
 if __name__ == "__main__":
     server_address = ("", 8000)

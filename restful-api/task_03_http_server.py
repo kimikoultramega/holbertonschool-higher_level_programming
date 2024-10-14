@@ -20,7 +20,7 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode('utf-8'))
 
         elif self.path == "/status":
-            self.response(200)
+            self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"OK")

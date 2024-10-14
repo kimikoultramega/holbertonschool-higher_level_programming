@@ -16,8 +16,12 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            response = {"name": "Jhon", "age": 30, "city": "New York"}
-            self.wfile.write(json.dumps(response).encode('utf-8'))
+            response = {
+                "name": "Jhon", 
+                "age": 30, 
+                "city": "New York"
+                }
+            self.wfile.write(json.dumps(response, separators=(',', ':')).encode('utf-8'))
 
         elif self.path == "/status":
             self.send_response(200)

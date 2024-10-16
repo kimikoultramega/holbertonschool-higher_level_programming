@@ -31,7 +31,7 @@ def get_user(username):  # El valor de username se pasa como parametro
 @app.route("/add_user", methods=["POST"])
 def add_user():
     data = request.get_json()
-    username = data.get("username")  # Fix: added quotes around "username"
+    username = data.get(username)
 
     if not username:
         return jsonify({"error": "Username is required"}), 400

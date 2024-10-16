@@ -33,7 +33,7 @@ def add_user():
     data = request.get_json()
     username = data.get("username")
 
-    if not isinstance(username, str):
+    if not isinstance(username, str) or username == "":
         return jsonify({"error": "Username is required"}), 400
 
     users[username] = {

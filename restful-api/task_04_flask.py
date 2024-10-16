@@ -22,7 +22,7 @@ def status():
 def get_user(username):
     user = users.get(username)
     if user:
-        return jsonify(user)
+        return jsonify(user), 200
     else:
         return jsonify({"error": "User not found"}), 404
 
@@ -35,19 +35,15 @@ def add_user():
         return jsonify({"error": "Username is required"}), 400
 
     if username in users:
-        # Si el usuario ya existe, se actualiza en lugar de devolver conflicto.
-        users[username] = {
+        return jsonify({"error": "Username already exists"}), 409  # Retornar 409 si el usuario ya existe
+
+
+    users[username] = {
             "name": data.get("name"),
             "age": data.get("age"),
             "city": data.get("city")
         }
-        return jsonify({"message": "User updated", "user": users[username]}), 200
-    else:
-        users[username] = {
-            "name": data.get("name"),
-            "age": data.get("age"),
-            "city": data.get("city")
-        }
+        
         return jsonify({"message": "User added", "user": users[username]}), 201
 
 if __name__ == "__main__":

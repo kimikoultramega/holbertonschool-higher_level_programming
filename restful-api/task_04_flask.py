@@ -24,7 +24,7 @@ def status():
 def get_user(username):  # El valor de username se pasa como parametro
     user = users.get(username)
     if user:
-        return jsonify(user), 200
+        return jsonify(user)
     else:
         return jsonify({"error": "User not found"}), 404
 
@@ -53,11 +53,12 @@ def add_user():
         return jsonify({"error": "City is required and must be a string"}), 400
 
     # Verificar si el usuario ya existe
-    if username in users:
-        return jsonify({"error": "Username already exists"}), 409  # Código 409 para conflicto
+    # if username in users:
+    #     return jsonify({"error": "Username already exists"}), 409  # Código 409 para conflicto
 
     # Agregar el nuevo usuario al diccionario
     users[username] = {
+        "username": username,
         "name": name,
         "age": age,
         "city": city

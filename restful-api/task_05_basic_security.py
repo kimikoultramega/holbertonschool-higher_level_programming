@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 
 from flask import Flask
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import JWTManager
-from flask import request, jsonify
 from flask_jwt_extended import create_access_token
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_jwt_extended import jwt_required
+from flask_jwt_extended import get_jwt_identity
+from flask import jsonify
+from flask import request
 
 app = Flask(__name__)
 

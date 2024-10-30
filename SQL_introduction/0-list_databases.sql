@@ -1,0 +1,3 @@
+-- Comentario.
+
+SHOW DATABASES;

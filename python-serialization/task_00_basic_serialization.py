@@ -10,3 +10,4 @@ def load_and_deserialize(filename):
     """Carga y deserializa datos desde un archivo JSON."""
     with open(filename, 'r') as file:
         return json.load(file)
+    

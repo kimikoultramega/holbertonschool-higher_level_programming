@@ -10,5 +10,4 @@ def fizzbuzz():
         elif i % 5 == 0:
             print("{}".format("Buzz"), end=" ")
         else:
-            print("{}".format(i), end=" ")
-    print()
+            print("{}".format(i), end=" " if i != 100 else "")

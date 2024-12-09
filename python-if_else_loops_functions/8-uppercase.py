@@ -10,3 +10,5 @@ def uppercase(str):
             container += chr(ord(c) -32)
         else:
             container += c
+
+    print(container)

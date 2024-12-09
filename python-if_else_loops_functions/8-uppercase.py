@@ -11,4 +11,5 @@ def uppercase(str):
         else:
             container += c
 
-    print(container)
+    print("{}".format(container))
+

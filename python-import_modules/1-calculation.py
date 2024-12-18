@@ -7,7 +7,7 @@ if __name__ == "__main__":
     b = 5
 
     string = "{} {} {} = {}\n"
-    
+
     result = (
         string.format(a, "+", b, add(a, b)) +
         string.format(a, "-", b, sub(a, b)) +
@@ -15,4 +15,3 @@ if __name__ == "__main__":
         string.format(a, "/", b, div(a, b))
     )
     print(result, end="")
-

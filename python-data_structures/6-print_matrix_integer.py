@@ -2,4 +2,9 @@
 
 def print_matrix_integer(matrix=[[]]):
     for fila in matrix:
-        print(" ".join("{:d}".format(num) for num in fila))
+
+        formated_num = ["{:d}".format(num) for num in fila]
+
+        new_string = " ".join(formated_num)
+
+        print(new_string)

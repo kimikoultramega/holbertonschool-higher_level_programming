@@ -6,3 +6,5 @@ def update_dictionary(a_dictionary, key, value):
         raise TypeError("Bullshit")
 
     a_dictionary[key] = value
+
+    return (a_dictionary)

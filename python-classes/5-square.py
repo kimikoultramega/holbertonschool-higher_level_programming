@@ -2,6 +2,8 @@
 """
 Doc
 """
+
+
 class Square:
     """
     Doc

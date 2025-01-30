@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+Doc
+"""
+
 
 class Square:
-
+"""
+Doc
+"""
     def __init__(self, size=0):
         self.size = size
 

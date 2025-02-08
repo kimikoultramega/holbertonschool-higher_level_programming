@@ -9,5 +9,6 @@ class MyList(list):
     Doc
     """
     def print_sorted(self):
-        var = sorted(self)
+        var = list(self)
+        var = sorted(var)
         print(var)

@@ -5,6 +5,9 @@ Doc
 
 
 def inherits_from(obj, a_class):
+    """
+    Doc
+    """
     tipo = type(obj)
     if tipo is a_class:  # Verificamos la clase
         return False

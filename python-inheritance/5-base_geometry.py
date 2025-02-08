@@ -5,4 +5,7 @@ Doc
 
 
 class BaseGeometry:
+    """
+    Doc
+    """
     pass

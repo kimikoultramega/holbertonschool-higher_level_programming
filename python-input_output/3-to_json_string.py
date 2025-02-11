@@ -6,6 +6,7 @@ Definiciones
 
 import json
 
+
 def to_json_string(my_obj):
     """
     Documentación que nadie lee

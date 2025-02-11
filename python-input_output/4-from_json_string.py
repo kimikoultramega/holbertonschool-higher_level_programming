@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-import json
 """
 Wakanda y la rebelión de los gatos amorfos
 """
+import json
+
 
 
 def from_json_string(my_str):

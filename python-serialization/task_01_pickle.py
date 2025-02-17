@@ -26,6 +26,9 @@ class CustomObject:
 
     @classmethod
     def deserialize(cls, filename):
-        with open(filename, 'rb') as file:
-            data = pickle.load(file)
-            return data
+        try:
+            with open(filename, 'rb') as file:
+                data = pickle.load(file)
+                return data
+        except (EOFError, FileNotFoundError, pickle.UnpicklingError, OSError):
+            return None

@@ -20,6 +20,7 @@ class CustomObject:
 
         except EOFError:
             raise ("Ran out of input")
+            return None
 
 
 

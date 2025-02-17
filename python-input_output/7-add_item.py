@@ -25,5 +25,6 @@ def main():
 
     save_to_json_file(data, filename)
 
+
 if __name__ == "__main__":
     main()

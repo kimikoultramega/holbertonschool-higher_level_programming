@@ -6,7 +6,7 @@ def fetch_and_print_posts():
 #  Se envía una solicitud HTTP GET a la URL
     response = requests.get("https://jsonplaceholder.typicode.com/posts")
 
-    print(f"{response.status_code}")
+    print(f"Status Code: {response.status_code}")
 
     if response.status_code == 200:
         posts = response.json()

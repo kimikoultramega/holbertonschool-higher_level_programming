@@ -9,7 +9,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         if self.path == "/":
             #  Código 200, está todo bien
             self.send_response(200)
-            self.send_header("Content-tupe", "text/plain")
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!")
         elif self.path == "/data":
@@ -38,11 +38,11 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
     
-    def run(server_class=HTTPServer, handler_class=MyRequestHandler, port=8000):
-        server_address = ('', port)
-        httpd = server_class(server_address, handler_class)
-        print(f"Servidor HTTP corriendo en el puerto {port}")
-        httpd.serve_forever()
+def run(server_class=HTTPServer, handler_class=MyRequestHandler, port=8000):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"Servidor HTTP corriendo en el puerto {port}")
+    httpd.serve_forever()
 
-    if __name__ == "__main__":
-        run()
+if __name__ == "__main__":
+    run()

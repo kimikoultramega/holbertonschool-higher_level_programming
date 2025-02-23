@@ -16,7 +16,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             #  Esta info la vamos a enviar
             data = {
                 "name": "John",
-                "age": "30",
+                "age": 30,
                 "city": "New York"
             }
             #  Con json.dumps convertimos el dicc a una string en formato JSON
@@ -33,7 +33,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"OK")
         else:
-            self.send_response(400)
+            self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
